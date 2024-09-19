@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Redaction-Italic", "serif"],
+              mono: ["Roboto-mono", "mono"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex h-screen p-8 flex-col justify-between bg-[#fff3c6]">
+      <div class="flex gap-4 p-2 justify-center font-serif text-[18pt]">
+        <span class="">Time</span>
+        <img src="./imgs/arrow-1.svg" alt="" />
+        <span class="font-serif">Traveler</span>
+      </div>
+      <div class="flex gap-4 p-2 justify-center font-serif text-[18pt]">
+        <span class="">Version 1</span>
+        <img src="./imgs/arrow-1.svg" alt="" />
+        <span>Version 2</span>
+        <img src="./imgs/arrow-1.svg" alt="" />
+        <span class="line-through decoration-1">Version 3</span>
+      </div>
+
+      <img
+        src="./imgs/fig-1.png"
+        class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 max-w-[600px] opacity-30"
+        alt=""
+      />
+      <div
+        class="font-serif tracking-wide text-[84pt] absolute z-1 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+      >
+        Code, Text, Type
+      </div>
+    </div>
+  </body>
+</html>
