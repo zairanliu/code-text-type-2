@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @font-face {
+        font-family: "redaction";
+        src: url("./webfonts/Redaction-Italic.woff2") format("woff2");
+      }
+    </style>
+
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              serif: ["Redaction-Italic", "serif"],
+              serif: ["redaction", "serif"],
               mono: ["Roboto-mono", "mono"],
             },
           },
