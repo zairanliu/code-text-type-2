@@ -34,41 +34,188 @@
           U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
           U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
+
+      body {
+        background-color: #fff3c6;
+        cursor: url("./imgs/cursor.svg"), auto;
+        margin: 0;
+        padding: 0;
+        font-family: "Literata Variable", serif;
+      }
+      .header {
+        font-size: 18px;
+        padding: 20px;
+        font-style: italic;
+        text-align: center;
+      }
+
+      .header img {
+        display: inline;
+        margin: 0 auto;
+      }
+      .bg-image {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15px;
+        width: 300px;
+        z-index: -1;
+        opacity: 0.2;
+      }
+
+      .page-title {
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+            font-family: 'Literata Variable', serif;
+        }
+
+        .author {
+            font-family: 'Literata Variable', serif;
+            font-style: italic;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .main-body{
+          max-width: 700px;
+            margin: 20px auto;
+            position: relative;
+            padding: 0 40px;
+        }
+        .main-text{
+          font-size: 24px;
+            line-height: 32px; 
+            margin-top: 40px;
+        }
+        .left-arrow {
+            position: relative;
+            margin-top: 2rem;
+        }
+        .left-arrow-number {
+            position: absolute;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .left-arrow-content {
+            padding-left: 350px;
+            padding-top: 20px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+            min-width: 150px;
+        }
+
+        .right-arrow {
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .right-arrow-image {
+            padding-top: 20px;
+            
+        }
+
+        .right-arrow-image img {
+            width: 280px;
+            mix-blend-mode: multiply;
+            opacity: 0.5;
+        }
+
+        .right-arrow-number {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: bold;
+        }
+
+        .right-arrow-caption {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+     
+        }
+        .small-numbers{
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 14px;
+          font-weight:bold;
+        }
+        .main-text-center{
+          text-align: center;
+          font-weight: 600;
+          font-size: 24px;
+        }
+
+        .footer {
+            text-align: center;
+            font-family: 'Literata Variable', serif;
+    
+            font-size: 14px;
+            margin: 2rem 0;
+        }
+
+        .footer .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .footnotes {
+            margin:20px;
+        }
+
+        .footnote-title {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .footnote {
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .footnote-number {
+            position: absolute;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .footnote-content {
+            margin-left: auto;
+            padding-left: 50px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            max-width: 300px;
+            min-width: 100px;
+        }
     </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ["Literata Variable", "serif"],
-              mono: ["IBM Plex Mono", "monospace"],
-            },
-            cursor: {
-              circle: "url(./imgs/cursor.svg), auto",
-            },
-          },
-        },
-      };
-    </script>
+
     <title>Code,Text,Type</title>
   </head>
-  <body class="bg-[#fff3c6] cursor-circle">
-    <div class="text-[18px] tracking-wide p-8 font-serif italic text-center">
-      <span class="mx-4"> time </span>
-      <img class="inline mx-auto" src="./imgs/arrow-1.svg" alt="" />
-      <span class="mx-4"> traveler </span>
-      <img
-        class="absolute left-1/2 -translate-x-1/2 top-[15px] w-[300px] -z-10 opacity-20 center"
-        src="./imgs/fig-0.png"
-        alt=""
-      />
+  <body>
+    <div class="header">
+      <span> time </span>
+      <img src="./imgs/arrow-1.svg" alt="" />
+      <span> traveler </span>
+      <img class="bg-image" src="./imgs/fig-0.png" alt="" />
     </div>
-    <h1 class="font-serif text-[64px] text-center">Code,Text,Type</h1>
-    <div class="font-serif italic text-[24px] text-center mt-8">
+
+    <h1 class="page-title">Code,Text,Type</h1>
+    <div class="author">
       by Anna Cairns
     </div>
-    <div class="max-w-[700px] mx-auto relative mt-16">
-      <div class="font-serif text-[24px] leading-[32px]">
+    <div class="main-body">
+      <div class="main-text">
         I was invited by Katrin Mayer to join in the investigation of her
         speculative question of what a feminist perspective on code might look
         like. We began collaboratively researching into internet history and
@@ -82,13 +229,13 @@
         a feminist rewriting of computing history is well under way today.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">1</span>
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>1</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content "
         >
           Computer has two separate yet related meanings. A computer, from the
           early 17th century and up until the first half of the 20th century,
@@ -101,20 +248,20 @@
       <!-- end of left arrow -->
 
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+   
             src="imgs/fig-1.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.01</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.01</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono font-bold text-[10px] leading-[14px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
           Analytical Engine,
           <br />
@@ -123,7 +270,7 @@
       </div>
       <!-- end of right arrow -->
 
-      <div class="mt-8 font-serif text-[24px] leading-[32px]">
+      <div class="main-text">
         Amongst the earliest technological innovations that would change the
         idea of what we now understand as “computing” was the Analytical Engine
         by Charles Babbage. He is widely credited as the inventor of the machine
@@ -132,33 +279,32 @@
         conceived of its algorithms (what we now call software), left
         unrecognized for a century.
       </div>
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
             src="imgs/fig-2.png"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.02</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.02</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono font-bold text-[10px] leading-[14px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
           >Daguerreotype of Ada Lovelace, <br />
           one of only two known photographs of her
         </span>
       </div>
       <!-- end of right arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">2</span>
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>2</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           The Analytical Engine would never be completed, but it represents the
           conceptual dawn of the computer age. (...) the strikingly original
@@ -172,20 +318,20 @@
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">3</span>
-          <img class="" src="./imgs/large-arrow.svg" alt="" />
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>3</span>
+          <img src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           (...) she was the first to consider that a machine could have
           applications beyond pure calculations (...).
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         But the Analytical Engine was yet too far ahead of its time, and while
         more efforts were made to invent technology that would aid in computing,
         data had to be processed and calculated painstakingly by hand. The
@@ -200,13 +346,13 @@
         hours of (female) computing labour.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">4</span>
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>4</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           These women quite literally mapped the cosmos, but their wages were
           equivalent to those of unskilled workers (...), they earned barely
@@ -215,20 +361,20 @@
       </div>
       <!-- end of left arrow -->
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+            class=""
             src="imgs/fig-3.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.03</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.03</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono font-bold text-[10px] leading-[14px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
           The Harvard Computers, a team of female mathematicians working to
           process astronomical imagery and data at the Harvard Observatory in
@@ -237,13 +383,13 @@
       </div>
       <!-- end of right arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">5</span>
-          <img class="" src="./imgs/large-arrow.svg" alt="" />
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>5</span>
+          <img src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           Female hands lifted from pencils and slide rules to desk calculators
           and switches, then relays and punch card tabulators. Coaxing
@@ -253,11 +399,11 @@
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         With time, typewriters, switchboards, computers: As women were seen as
         mere “operators” of machines, their work was assumed to be “more
         handicraft than science” and thus “more mechanical than intellectual”
-        <span class="font-mono font-bold text-[16px]"> 6 </span> . However, the
+        <span class="small-numbers"> 6 </span> . However, the
         true merit of their work was just harder to spot than the more tangible
         developments in engineering, a field mainly dominated by men. These
         womens’ lasting accomplishment was in fact running, performing, and
@@ -265,13 +411,13 @@
         infrastructure.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">7</span>
-          <img class="" src="./imgs/large-arrow.svg" alt="" />
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>7</span>
+          <img src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           (...) For a few centuries, groups of women working in hives and
           “harems” were the hardware (...). It’s the accumulation of all those
@@ -285,44 +431,38 @@
       </div>
       <!-- end of left arrow -->
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+          
             src="imgs/fig-4.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.04</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.04</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
-        <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
-        >
-        </span>
+      
       </div>
       <!-- end of right arrow -->
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+
             src="imgs/fig-5.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.05</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.05</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
-        <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
-        >
-        </span>
+      
       </div>
       <!-- end of right arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         I thought about how what I am seeing while programming this website
         might relate to the work these women were doing. Using technology,
         virtual models of thinking, working intimately with text-as-data. The
@@ -330,26 +470,26 @@
         machinery that by its design determined its characteristic visuality. 
       </div>
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+      
             src="imgs/fig-6.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.06</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.06</span>
+          <img class="right-arrow-image"" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono font-bold text-[10px] leading-[14px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
           Monospaced letters on a typewriter
         </span>
       </div>
       <!-- end of right arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         In the beginning, typewriters did not differentiate between the widths
         of individual letters, and thus each letter was printed with the same
         width. This meant that some particularly wide letters (like the m and
@@ -358,7 +498,7 @@
         cause too many gaps in the text. 
         <br />
         <br />
-        <div class="text-center font-bold text-[32px] leading-[48px]">
+        <div class="main-text-center">
           <span> the i </span> <br />
           <span> the l </span> <br />
           <span> the I </span> <br />
@@ -376,32 +516,28 @@
         the machine; and by doing so, they invented software programming.
       </div>
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+       
             src="imgs/fig-7.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.07</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.07</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
-        <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
-        >
-        </span>
       </div>
       <!-- end of right arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">8</span>
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span">8</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           No one really knew how to program the room-sized machine – the only
           thing that existed were the wiring diagrams representing the physical
@@ -418,7 +554,7 @@
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         However, despite their doubtless pioneering innovations and the
         significant importance of their intellectual work, they were not
         credited. Instead, they were often portrayed either more as the
@@ -426,13 +562,13 @@
         it.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">9</span>
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>9</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           When the ENIAC was finally unveiled to the public in 1946, there was
           no mention of the women who made it run and effectively invented
@@ -446,7 +582,7 @@
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         After decades of suffering disregard, they have finally started to
         receive recognition in recent years. Punchcards, though not an entirely
         new technology, were adopted from around 1930 to write and store
@@ -456,50 +592,50 @@
         between information technology and manual labour.
       </div>
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+     
             src="imgs/fig-8.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.08</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.08</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
         </span>
       </div>
       <!-- end of right arrow -->
 
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         The job of the data typist emerged. This was what code looked like for
         at least half a century: typed and punched, on paper.
       </div>
 
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+            
             src="imgs/fig-9.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.09</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.09</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
         </span>
       </div>
       <!-- end of right arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         This type of data storage transmits data through holes and non-holes,
         through binary logic, on/off, the zeroes and ones that machines
         understand. Of course, this is not how humans process information, so
@@ -510,13 +646,13 @@
         in human language.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">10</span>
+      <div class="left-arrow">
+        <div class="left-arrow-number">
+          <span>10</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           Grace Murray Hopper was an American computer scientist known for
           popularizing the idea that programming languages could be independent
@@ -541,44 +677,44 @@
       </div>
       <!-- end of left arrow -->
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+            class=""
             src="imgs/fig-11.webp"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.11</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.11</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
         </span>
       </div>
       <!-- end of right arrow -->
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+            class=""
             src="imgs/fig-12.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.12</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.12</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
         </span>
       </div>
       <!-- end of right arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         Programming today carries her legacy. First and foremost, code is a
         language, with syntax and grammar and vocabulary, plus some logic. We
         can invent code much like a sentence, choosing the words that fit best.
@@ -623,44 +759,44 @@
         needs a typeface. This text, this code, this website needed a typeface.
       </div>
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+            class=""
             src="imgs/fig-13.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.13</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.13</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
         </span>
       </div>
       <!-- end of right arrow -->
       <!-- right arrow -->
-      <div class="relative mt-8">
-        <div class="pt-[20px]">
+      <div class="right-arrow">
+        <div class="right-arrow-image">
           <img
-            class="w-[300px] mix-blend-multiply opacity-50"
+            class=""
             src="imgs/fig-14.jpg"
             alt=""
           />
         </div>
-        <div class="absolute top-0 right-0">
-          <span class="font-mono font-bold absolute right-0">fig.14</span>
-          <img class="pt-[20px]" src="./imgs/large-arrow-reversed.svg" alt="" />
+        <div class="right-arrow-number">
+          <span class="right-arrow-number">fig.14</span>
+          <img class="right-arrow-image" src="./imgs/large-arrow-reversed.svg" alt="" />
         </div>
         <span
-          class="font-mono text-[12px] leading-[18px] w-[318px] absolute bottom-0 right-0"
+          class="right-arrow-caption"
         >
         </span>
       </div>
       <!-- end of right arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         Early typewriters usually came with one typeface built right into the
         machine. The introduction of changeable typefaces moved the typewriter
         one step closer to becoming a modern productive word processor and
@@ -670,13 +806,13 @@
         important bridge technology between typewriter and computer.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
+      <div class="right-arrow">
         <div class="absolute">
           <span class="font-mono font-bold text-[16px]">11</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           At the physical heart of the Selectric typewriter’s innovation was a
           golf-ball-shaped type head that replaced the conventional typewriter’s
@@ -703,7 +839,7 @@
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         Dual Basic was one of the many typefaces available for the Selectric. I
         liked the typeface for its openness and clarity; also, it lacks the
         usual modifications done on monospaced typefaces to fill visual holes.
@@ -734,13 +870,13 @@
         interaction, output. Code is text is type is font is code?
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
+      <div class="right-arrow">
         <div class="absolute">
           <span class="font-mono font-bold text-[16px]">12</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           Something happened to the generation of programmers after Grace Hopper
           and her peers. Although (...) women were being encouraged to pursue
@@ -752,7 +888,7 @@
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         Let me tie at least one of many loose ends here. You may rightfully
         wonder: what happened to women programmers? Why is the image we have of
         a programmer today automatically, reflexively, that of a man? I have
@@ -770,13 +906,13 @@
         access to the field and who couldn’t.
       </div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
+      <div class="right-arrow">
         <div class="absolute">
           <span class="font-mono font-bold text-[16px]">13</span>
           <img class="" src="./imgs/large-arrow.svg" alt="" />
         </div>
         <div
-          class="pl-[380px] pt-[20px] font-mono font-light text-[16px] leading-[20px]"
+          class="left-arrow-content"
         >
           As such, it would be treated like a branch of engineering (...). This
           change signaled a larger renegotiation of computing’s professional
@@ -793,7 +929,7 @@
         </div>
       </div>
       <!-- end of left arrow -->
-      <div class="font-serif text-[24px] leading-[32px] mt-8">
+      <div class="main-text">
         Women faded from the profession. They were never truly gone, but harder
         to be found. There were still women where networks were formed;
         hypertexts created; knowledge organised; search engines built; message
@@ -854,169 +990,161 @@
       </div>
       <br />
       <br />
-      <div class="font-mono font-bold text-[20px]">Footnote</div>
+    <div class="footnotes">
+      <div class="footnote-title">Footnote</div>
       <!-- left-arrow -->
-      <div class="relative mt-8">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">1</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span class="">1</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Sophie Rentien Lando, Computers at Work – About Women in Computing,
           Paris: Espace Ness 2019, p. 5, 6
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">2</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>2</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Claire L. Evans, Broad Band –The Untold Story of the Women who made
           the Internet, New York: Portfolio 2018, p. 21
         </div>
       </div>
       <!-- end of left arrow -->
+     
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">3</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>3</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
-          Claire L. Evans, Broad Band –The Untold Story of the Women who made
-          the Internet, New York: Portfolio 2018, p. 21
-        </div>
-      </div>
-      <!-- end of left arrow -->
-      <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">3</span>
-        </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Sophie Rentien Lando, Computers at Work – About Women in Computing,
           Paris: Espace Ness 2019, p. 20
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">4</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>4</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Claire L. Evans, Broad Band –The Untold Story of the Women who made
           the Internet, New York: Portfolio 2018, p. 23
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">5</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>5</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           -
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">6</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>6</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Claire L. Evans, Broad Band –The Untold Story of the Women who made
           the Internet, New York: Portfolio 2018, p. 42
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">7</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>7</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Ebd., p. 25
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">8</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span class="">8</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Sophie Rentien Lando, Computers at Work – About Women in Computing,
           Paris: Espace Ness 2019, p. 62
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">9</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>9</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Cory Stieg, “The Forgotten History Of The Women Who Programmed The
-          First Modern Computer”, 01.03.2022, last accessed: 08.11.2022
-          https://www.codecademy.com/resources/blog/eniac-six-women-programmed-computer/
+          First Modern Computer”
+         
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">10</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>10</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Sophie Rentien Lando, Computers at Work – About Women in Computing,
           Paris: Espace Ness 2019, p. 75, 77
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">11</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>11</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
-          IBM, “The Selectric Typewriter”, last accessed: 08.11.2022
-          https://www.ibm.com/ibm/history/ibm100/us/en/icons/selectric/
+        <div class="footnote-content">
+          IBM, “The Selectric Typewriter”
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">12</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>12</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Claire L. Evans, Broad Band –The Untold Story of the Women who made
           the Internet, New York: Portfolio 2018, p. 76, 77
         </div>
       </div>
       <!-- end of left arrow -->
       <!-- left-arrow -->
-      <div class="relative mt-4">
-        <div class="absolute">
-          <span class="font-mono font-bold text-[16px]">13</span>
+      <div class="footnote">
+        <div class="footnote-number">
+          <span>13</span>
         </div>
-        <div class="pl-[380px] font-mono font-light text-[16px] leading-[20px]">
+        <div class="footnote-content">
           Ebd., p. 77, 78
         </div>
       </div>
       <!-- end of left arrow -->
+    </div>
+      
       <br />
       <br />
       <div class="text-center font-serif tracking-wider text-[14px]">
         Typeset in <span class="italic"> Literata </span> &
         <span class="font-mono"> IBM Plex Mono </span>
       </div>
-      <div class="text-[18px] tracking-wide p-8 font-serif italic text-center">
-        <span class="mx-4"> time </span>
-        <img class="inline mx-auto" src="./imgs/arrow-1.svg" alt="" />
-        <span class="mx-4"> traveler </span>
+      <div class="header">
+        <span> time </span>
+        <img src="./imgs/arrow-1.svg" alt="" />
+        <span> traveler </span>
       </div>
     </div>
   </body>
